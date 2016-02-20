@@ -5,7 +5,7 @@ var config = {
     env:  'prod',
 
     host: '0.0.0.0',
-    port: process.env.PORT || 5000,
+    port: process.env.PORT || 5050,
 
     // Available themes:
     // + night-blue
@@ -13,7 +13,8 @@ var config = {
     // + yellow
     // + light-yellow
     // + bordeau
-    theme: 'night-blue',
+    // theme: 'night-blue',
+    theme: 'light-grey',
 
     // clients configs
     api: {
@@ -52,20 +53,20 @@ var config = {
                     columns: 1, rows: 1,
                     x: 2, y: 0
                 },
-                {
-                    type: 'travis.repository',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 1, rows: 1,
-                    x: 1, y: 0
-                },
-                {
-                    type: 'travis.build_histogram',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 2, rows: 1,
-                    x: 1, y: 1
-                },
+                // {
+                //     type: 'travis.repository',
+                //     owner: 'plouc',
+                //     repository: 'mozaik',
+                //     columns: 1, rows: 1,
+                //     x: 1, y: 0
+                // },
+                // {
+                //     type: 'travis.build_histogram',
+                //     owner: 'plouc',
+                //     repository: 'mozaik',
+                //     columns: 2, rows: 1,
+                //     x: 1, y: 1
+                // },
                 {
                     type: 'time.clock',
                     columns: 1, rows: 1,
@@ -79,64 +80,67 @@ var config = {
                     limit: 2,
                     columns: 1, rows: 1,
                     x: 0, y: 1
-                },
-                {
-                    type: 'travis.build_history',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 1, rows: 2,
-                    x: 3, y: 1
-                },
-                {
-                    type: 'travis.build_histogram',
-                    owner: 'plouc',
-                    repository: 'go-gitlab-client',
-                    columns: 2, rows: 1,
-                    x: 1, y: 2
-                },
-                {
-                    type: 'github.status',
-                    columns: 1, rows: 1,
-                    x: 0, y: 2
                 }
-            ]
-        },
-
-        // second dashboard
-        {
-            // 3 x 2 dashboard
-            columns: 3,
-            rows:    2,
-            widgets: [
-                {
-                    type: 'travis.build_history',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 1, rows: 2,
-                    x: 0, y: 0
-                },
-                {
-                    type: 'github.user_badge',
-                    user: 'plouc',
-                    columns: 1, rows: 1,
-                    x: 2, y: 0
-                },
-                {
-                    type: 'travis.repository',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 1, rows: 1,
-                    x: 1, y: 0
-                },
-                {
-                    type: 'travis.build_histogram',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 2, rows: 1,
-                    x: 1, y: 1
-                }
+                // ,
+                // {
+                //     type: 'travis.build_history',
+                //     owner: 'plouc',
+                //     repository: 'mozaik',
+                //     columns: 1, rows: 2,
+                //     x: 3, y: 1
+                // },
+                // {
+                //     type: 'travis.build_histogram',
+                //     owner: 'plouc',
+                //     repository: 'go-gitlab-client',
+                //     columns: 2, rows: 1,
+                //     x: 1, y: 2
+                // }
+                // ,
+                // {
+                //     type: 'github.status',
+                //     columns: 1, rows: 1,
+                //     x: 0, y: 2
+                // }
             ]
         }
+        // ,
+        //
+        // // second dashboard
+        // {
+        //     // 3 x 2 dashboard
+        //     columns: 3,
+        //     rows:    2,
+        //     widgets: [
+        //         {
+        //             type: 'travis.build_history',
+        //             owner: 'plouc',
+        //             repository: 'mozaik',
+        //             columns: 1, rows: 2,
+        //             x: 0, y: 0
+        //         },
+        //         {
+        //             type: 'github.user_badge',
+        //             user: 'plouc',
+        //             columns: 1, rows: 1,
+        //             x: 2, y: 0
+        //         },
+        //         {
+        //             type: 'travis.repository',
+        //             owner: 'plouc',
+        //             repository: 'mozaik',
+        //             columns: 1, rows: 1,
+        //             x: 1, y: 0
+        //         },
+        //         {
+        //             type: 'travis.build_histogram',
+        //             owner: 'plouc',
+        //             repository: 'mozaik',
+        //             columns: 2, rows: 1,
+        //             x: 1, y: 1
+        //         }
+        //     ]
+        // }
     ]
 };
 
